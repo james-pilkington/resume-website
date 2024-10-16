@@ -1,5 +1,7 @@
+/* APP LEVEL */
 .App {
   text-align: center;
+  background-color: #2D2D2D; 
 }
 
 .App-logo {
@@ -35,4 +37,305 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* NAV BAR */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /*justify-content: center;; */
+  z-index: 999;
+  background-color: #2D2D2D;
+  color: white;
+}
+
+nav label {
+  text-align: left;
+  font-variant: small-caps;  
+  font-size: 30px;
+}
+
+nav ul {
+  display: flex; /* Make the ul a flex container */
+  justify-content: flex-end; /* Align the links to the right */
+  margin: 0; /* Ensure there's no margin around ul */
+  padding: 0; /* Remove padding around ul */
+  list-style-type: none; /* Remove bullets */
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 1em;
+  font-variant: small-caps; 
+}
+
+nav ul li:hover {
+  background-color: #8000ff;
+}
+
+/* HEADER SECTION */
+header {
+  padding-top: 100px;
+  background-color: #495e57;
+  background-image: url("../src/images/header-background.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-blend-mode: color grey;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns, image on the left, details on the right */
+  width: 50%; /* Center on the page */
+  background-color: #2D2D2D; /* Dark grey background */
+  align-items: stretch; /* Make both columns equal height */
+  margin: 10px;
+  background-color: #2D2D2D; /* Dark grey background */
+  color: white;
+}
+
+section img {
+  width: 100%; /* Make image take up full column width */
+  height: 100%; /* Make the image height fill the column */
+  object-fit: cover; /* Keep the aspect ratio of the image */
+}
+
+#intro_details {
+  grid-column: 2/2;
+  grid-row: 1/1;
+  padding-left: 60px;
+  padding-right: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 12px; /* Reduced font size */
+}
+
+#intro_details h2 {
+  margin: 3px 0; /* Reduces the spacing between the headers and the paragraphs */
+  line-height: 1.4ex;
+}
+
+#intro_details p {
+  margin: 4px 0; /* Reduces the spacing between the headers and the paragraphs */
+  line-height: 1.0ex;
+}
+
+header section h1 {
+  font-size: 30px;
+  margin: 5px 0;
+  line-height: 1.4ex;
+}
+
+#summary {
+  background-color: #969696;
+  color: white;
+  text-align: center;
+  align-content: center;
+}
+
+#summary p {
+  padding-left: 400px;
+  padding-right: 400px;
+  min-width: 400px;
+}
+
+
+/* MAIN SECTION */
+#title {
+  background-color: #2D2D2D; 
+  color: white;
+  font-size: 35px;
+  display: flex;
+  letter-spacing: 8px;
+  text-align: center;
+  padding: 5px;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+main img {
+  height: 30px;
+  width: auto;
+  padding-top: 30px;
+}
+#experience {
+  background-image: url("../src/images/experience.jpg");
+  background-size: cover;
+  background-position: bottom;
+  color: white;
+  background-color: black;
+}
+#education {
+  background-image: url("../src/images/derby.jpg");
+  background-size: cover;
+  background-position: bottom;
+  color: white;
+  background-color: black;
+  background-blend-mode: darken(1);
+
+}
+main section {
+  display: grid;
+  grid-template-columns:  1fr 2fr;
+
+}
+
+main section h2 {
+  grid-column: 1/1;
+  text-align: right;
+  padding-right: 10px;
+  line-height: 1.4ex;
+  margin: 5px 0;
+  padding-top: 30px;
+}
+main section h3 {
+  grid-column: 1/1;
+  text-align: right;
+  padding-right: 10px;
+  text-shadow: 2px 2px #8000ff;
+
+}
+main section p {
+  grid-column: 2/2;
+  text-align: left;
+  padding-left: 10px;
+  text-shadow: 2px 2px black;
+  background-color: black;
+  filter: opacity(40%);
+  box-shadow: 0px 0px 30px 10px black;
+  -webkit-backdrop-filter: blur(100px);
+  backdrop-filter: blur(100px);
+}
+
+
+
+
+/* TESTIMONIALS SECTION */
+.carousel-container {
+  background-color: #969696;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-top: 1.5rem; */
+}
+
+.carousel-content {
+  text-align: center;
+  color: white;
+  display: grid;
+  width: 80%;
+  height: 200px;
+
+}
+
+.carousel-content h4 {
+  grid-row: 2/2;
+}
+
+.carousel-container button {
+  background-color: #8000ff;
+  color: #fff;
+  padding: 10px 20px; 
+  height: 100%;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* CONTACT SECTION */
+
+.contact-container {
+  background-color: #2D2D2D; 
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 20px; /* Space between the columns */
+  padding: 40px;
+}
+
+.contact-form {
+  background-color: #2D2D2D; 
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  background-color: #2D2D2D; 
+  width: 96%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: white;
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+}
+
+
+.contact-form button {
+  background-color: #8000ff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.contact-details {
+  background-color: #2D2D2D; 
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+.contact-details h2 {
+  margin-bottom: 10px;
+}
+
+.contact-details p {
+  margin: 5px 0;
+}
+
+
+/* FOOTER SECTION */
+footer section {
+  grid-template-columns: 1fr 1fr 1fr;
+  display:grid;
+}
+
+footer img {
+width: 50px;
 }
