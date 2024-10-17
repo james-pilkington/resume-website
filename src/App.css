@@ -90,6 +90,7 @@ nav ul li:hover {
 
 /* HEADER SECTION */
 header {
+  position: relative; /* Make the header a positioned element */
   padding-top: 75px;
   background: var(--dark-bg) url("../src/images/header-background.webp") center center / cover no-repeat;
   width: 100%;
@@ -98,6 +99,24 @@ header {
   align-items: center;
   color: var(--text-color);
 }
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark overlay with some transparency */
+  z-index: 1; /* Ensure the overlay is below the content */
+}
+
+/* Make sure content inside header is above the overlay */
+header * {
+  position: relative;
+  z-index: 2;
+}
+
 
 #intro {
   display: grid;
@@ -177,13 +196,31 @@ main img {
 }
 
 #experience {
+  position: relative;
   background-image: url("../src/images/experience.jpg");
   background-size: cover;
   background-position: bottom;
   color: white;
-  background-color: black;
 }
-#education {
+
+#experience::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* Dark overlay with some transparency */
+  z-index: 1; /* Ensure the overlay is below the content */
+}
+
+/* Make sure content inside #education is above the overlay */
+#experience * {
+  position: relative;
+  z-index: 2;
+}
+
+/* #education {
   background-image: url("../src/images/derby.jpg");
   background-size: cover;
   background-position: bottom;
@@ -191,12 +228,39 @@ main img {
   background-color: black;
   background-blend-mode: darken(1);
 
+} */
+
+#education {
+  position: relative; /* Make the section a positioned element */
+  background-image: url("../src/images/derby.jpg");
+  background-size: cover;
+  background-position: bottom;
+  color: white;
 }
+
+#education::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* Dark overlay with some transparency */
+  z-index: 1; /* Ensure the overlay is below the content */
+}
+
+/* Make sure content inside #education is above the overlay */
+#education * {
+  position: relative;
+  z-index: 2;
+}
+
 main section {
   display: grid;
   grid-template-columns:  1fr 2fr;
   gap: 20px;
 }
+
 
 main section h2 {
   text-align: right;
@@ -207,21 +271,14 @@ main section h2 {
 main section h3 {
   text-align: right;
   padding-right: 10px;
-  text-shadow: 2px 2px var(--primary-color);
+  text-shadow: 0.5px 0.5px var(--primary-color);
 }
 main section p {
   grid-column: 2/2;
   text-align: left;
   padding-left: 10px;
-  text-shadow: 2px 2px black;
-  background-color: black;
-  filter: opacity(40%);
-  box-shadow: 0px 0px 30px 10px black;
-  -webkit-backdrop-filter: blur(100px);
-  backdrop-filter: blur(100px);
   padding: 15px;
 }
-
 
 
 
@@ -344,6 +401,7 @@ button:hover {
       text-align: center;
     }
   
+
     nav ul {
       flex-direction: column;
       align-items: center;
