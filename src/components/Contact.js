@@ -12,18 +12,24 @@ const Contact = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Implement form submission logic here
-    console.log("Form submitted:", formData);
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   // Implement form submission logic here
+  //   console.log("Form submitted:", formData);
+  // };
 
   return (
     <>
     <section id="title"><label>CONTACT</label></section>
     <div className="contact-container">
       <div className="contact-form">
-        <form onSubmit={handleSubmit}>
+        {/* <form onSubmit={handleSubmit}>  */}
+
+        <form
+        action="https://formspree.io/f/mkgnnlgd"
+        method="POST"
+>
+
           <div className="form-group">
             <label htmlFor="name">Name</label>
             <input

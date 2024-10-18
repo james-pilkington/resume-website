@@ -11,7 +11,7 @@ const About = () => {
                 <h1>JAMES PILKINGTON
                 <span style={{ color: "#8000ff" }}>.</span>
                 </h1>
-                <h2>Client-Obsessed Product & Implementation Expert: Coaching and Empowering Teams towards Triumphs</h2>
+                <h2 id="tagline">Client-Obsessed Product & Implementation Expert: Coaching and Empowering Teams towards Triumphs</h2>
                 <h2>Phone:</h2>
                 <p>9784089868</p>
                 <h2>Email:</h2>
