@@ -455,10 +455,6 @@ button:hover {
         display: block; /* Show the hamburger icon */
     }
 
-    .hamburger {
-      display: block;
-  }
-
   .menu {
       display: none;
       flex-direction: column;
@@ -501,3 +497,39 @@ nav .menu {
   gap: 15px;
 }
 
+@media (max-width: 768px) {
+  nav ul {
+      display: none; /* Hide by default */
+      flex-direction: column;
+      background-color: var(--dark-bg);
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+      text-align: center;
+  }
+
+  nav ul li {
+      padding: 1em;
+  }
+
+  /* Show the menu when open */
+  nav ul.show-menu {
+      display: block;
+  }
+
+  .hamburger {
+      display: block;
+      cursor: pointer;
+      font-size: 24px;
+  }
+  .menu-open {
+    display: block;
+}
+.menu-closed {
+    display: none;
+}
+}

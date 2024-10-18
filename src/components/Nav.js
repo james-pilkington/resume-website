@@ -10,6 +10,7 @@ const Nav = ({ aboutRef, mainRef, testimonialsRef, contactRef }) => {
 
     const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+    console.log('Menu is now:', !isMenuOpen ? 'Open' : 'Closed');
     };
 
     return(
@@ -21,7 +22,7 @@ const Nav = ({ aboutRef, mainRef, testimonialsRef, contactRef }) => {
                 ☰
             </div>
 
-            <ul>
+            <ul className={isMenuOpen ? 'menu-open' : 'menu-closed'}>
                 <li><a  href="#home" onClick={() => scrollToSection(aboutRef)} style={{ background: 'none', border: 'none', color: 'inherit', textDecoration: 'underline', cursor: 'pointer' }}>Home</a></li>
                 <li><a href="#about" onClick={() => scrollToSection(aboutRef)} style={{ background: 'none', border: 'none', color: 'inherit', textDecoration: 'underline', cursor: 'pointer' }}>About</a></li>
                 <li><a href="#main" onClick={() => scrollToSection(mainRef)} style={{ background: 'none', border: 'none', color: 'inherit', textDecoration: 'underline', cursor: 'pointer' }}>Experience & Education</a></li>
