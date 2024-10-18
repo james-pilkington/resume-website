@@ -426,6 +426,16 @@ button:hover {
     cursor: pointer;
 }
 
+/* Menu styles for mobile when open */
+.menu.open {
+  display: block;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  left: 0;
+  background-color: var(--dark-bg);
+}
+
 /* Dropdown Menu */
 .dropdown-menu {
     display: flex;
@@ -444,6 +454,21 @@ button:hover {
     .hamburger {
         display: block; /* Show the hamburger icon */
     }
+
+    .hamburger {
+      display: block;
+  }
+
+  .menu {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+  }
+
+  .menu.open {
+      display: block;
+  }
 
     .dropdown-menu {
         display: none; /* Hide dropdown by default */
@@ -467,3 +492,12 @@ button:hover {
         border-bottom: 1px solid #444;
     }
 }
+
+
+
+nav .menu {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+}
+
