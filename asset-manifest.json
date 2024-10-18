@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/resume-website/static/css/main.2690fc4a.css",
-    "main.js": "/resume-website/static/js/main.26ac503a.js",
+    "main.css": "/resume-website/static/css/main.988c7565.css",
+    "main.js": "/resume-website/static/js/main.4a8535a3.js",
     "static/js/453.61468adb.chunk.js": "/resume-website/static/js/453.61468adb.chunk.js",
     "static/media/derby.jpg": "/resume-website/static/media/derby.b6bdf9b09cda9d3fded9.jpg",
     "static/media/header-background.webp": "/resume-website/static/media/header-background.b9b8ea8ad2d0040b8eba.webp",
@@ -11,12 +11,12 @@
     "static/media/monotype.png": "/resume-website/static/media/monotype.f1fdea51832164d6fc6f.png",
     "static/media/grubhub.png": "/resume-website/static/media/grubhub.494328b3ee217803bd83.png",
     "index.html": "/resume-website/index.html",
-    "main.2690fc4a.css.map": "/resume-website/static/css/main.2690fc4a.css.map",
-    "main.26ac503a.js.map": "/resume-website/static/js/main.26ac503a.js.map",
+    "main.988c7565.css.map": "/resume-website/static/css/main.988c7565.css.map",
+    "main.4a8535a3.js.map": "/resume-website/static/js/main.4a8535a3.js.map",
     "453.61468adb.chunk.js.map": "/resume-website/static/js/453.61468adb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2690fc4a.css",
-    "static/js/main.26ac503a.js"
+    "static/css/main.988c7565.css",
+    "static/js/main.4a8535a3.js"
   ]
 }
