@@ -253,10 +253,16 @@ main section p, main section ul {
 
 .carousel-content {
   text-align: center;
+  justify-content: center;
   color: var(--text-color);
   display: grid;
   width: 80%;
 /*Figure out height to stop changing */
+}
+
+.carousel-container img {
+  width: 50%;
+  margin: 0 auto;
 }
 
 .carousel-content h4 {

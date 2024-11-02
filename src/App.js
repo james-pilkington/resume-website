@@ -6,6 +6,7 @@ import About from "./components/About"
 import Main from "./components/Main"
 import Testimonials from "./components/Testimonials"
 import Contact from "./components/Contact"
+import Portfolio from "./components/portfolio"
 //import Footer from "./components/Footer"
 
 
@@ -17,6 +18,7 @@ function App() {
     const mainRef = useRef(null);
     const testimonialsRef = useRef(null);
     const contactRef = useRef(null);
+    const portfolioRef = useRef(null);
     
   return (
     <div>
@@ -35,6 +37,9 @@ function App() {
       </section>
       <section ref={testimonialsRef}>
       <Testimonials />
+      </section>
+      <section ref={portfolioRef}>
+      <Portfolio /> 
       </section>
       <section ref={contactRef}>
       <Contact /> 
