@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import sonic from "../images/sonic.png";
+import pacman from "../images/pacman.jpg";
 
 const Portfolio = () => {
     const samples = [
@@ -11,9 +12,11 @@ const Portfolio = () => {
           image: sonic, // replace with actual image path
         },
         {
-          title: "Person2",
-          description: "Game2",
-          image: sonic, // replace with actual image path
+          title: "Pacman",
+          description: "Pacman Game built in JS",
+          live: "https://james-pilkington.github.io/sonic/",
+          repo: "https://github.com/james-pilkington/sonic.git",
+          image: pacman, // replace with actual image path
         }
       ];
     
