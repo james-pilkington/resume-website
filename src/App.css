@@ -260,9 +260,8 @@ main section p, main section ul {
 /*Figure out height to stop changing */
 }
 
-.carousel-container img {
-  width: 50%;
-  margin: 0 auto;
+#portfolio .carousel-content h4 {
+  grid-row: 1/1;
 }
 
 .carousel-content h4 {
