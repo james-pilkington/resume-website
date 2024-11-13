@@ -1,24 +1,22 @@
 {
   "files": {
-    "main.css": "/resume-website/static/css/main.54c94fd4.css",
-    "main.js": "/resume-website/static/js/main.d84b7fc4.js",
+    "main.css": "/resume-website/static/css/main.335168d3.css",
+    "main.js": "/resume-website/static/js/main.5159f13f.js",
     "static/js/453.61468adb.chunk.js": "/resume-website/static/js/453.61468adb.chunk.js",
-    "static/media/sonic.png": "/resume-website/static/media/sonic.fe0e17ec8706da9f29fb.png",
     "static/media/derby.jpg": "/resume-website/static/media/derby.b6bdf9b09cda9d3fded9.jpg",
     "static/media/header-background.webp": "/resume-website/static/media/header-background.b9b8ea8ad2d0040b8eba.webp",
     "static/media/logo.jpeg": "/resume-website/static/media/logo.1cdb53fccaf5f9702e95.jpeg",
     "static/media/bny.png": "/resume-website/static/media/bny.d964a7eabdb555615935.png",
     "static/media/experience.jpg": "/resume-website/static/media/experience.456cca8ee675639ad514.jpg",
-    "static/media/pacman.jpg": "/resume-website/static/media/pacman.1d8e8bdd125521110ce6.jpg",
     "static/media/monotype.png": "/resume-website/static/media/monotype.f1fdea51832164d6fc6f.png",
     "static/media/grubhub.png": "/resume-website/static/media/grubhub.494328b3ee217803bd83.png",
     "index.html": "/resume-website/index.html",
-    "main.54c94fd4.css.map": "/resume-website/static/css/main.54c94fd4.css.map",
-    "main.d84b7fc4.js.map": "/resume-website/static/js/main.d84b7fc4.js.map",
+    "main.335168d3.css.map": "/resume-website/static/css/main.335168d3.css.map",
+    "main.5159f13f.js.map": "/resume-website/static/js/main.5159f13f.js.map",
     "453.61468adb.chunk.js.map": "/resume-website/static/js/453.61468adb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.54c94fd4.css",
-    "static/js/main.d84b7fc4.js"
+    "static/css/main.335168d3.css",
+    "static/js/main.5159f13f.js"
   ]
 }
