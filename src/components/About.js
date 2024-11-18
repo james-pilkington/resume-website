@@ -1,7 +1,42 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import logo from "../images/logo.jpeg"
+import app from "./firebase";
+import { getDatabase, ref, get } from "firebase/database";
+
+ 
+
+
 
 const About = () => {
+
+    const [portfolioArray, setPortfolioArray] = useState([]);
+
+    useEffect(() => {
+      const fetchData = async () => {
+        const db = getDatabase(app);
+        const dbRef = ref(db, "resume/hero");
+        const snapshot = await get(dbRef);
+        if (snapshot.exists()) {
+          setPortfolioArray(Object.values(snapshot.val()));
+        } else {
+          alert("Error fetching portfolio data");
+        }
+      };
+
+      fetchData();
+    }, []);
+
+    
+    const email = portfolioArray[0];
+    const location = portfolioArray[1];
+    const phone = portfolioArray[2];
+
+    const summaryDetail = portfolioArray[3];
+    const summaryHeadline = portfolioArray[4];
+
+    const tagline = portfolioArray[5];
+
+
     return(
         <header>
 
@@ -11,29 +46,19 @@ const About = () => {
                 <h1>JAMES PILKINGTON
                 <span style={{ color: "#8000ff" }}>.</span>
                 </h1>
-                <h2 id="tagline">Client-Obsessed Product & Implementation Expert: Coaching and Empowering Teams towards Triumphs</h2>
+                <h2 id="tagline">{tagline}</h2>
                 <h2>Phone:</h2>
-                <p>9784089868</p>
+                <p>{phone}}</p>
                 <h2>Email:</h2>
-                <p>James.Pilkington2@gmail.com</p>
+                <p>{email}</p>
                 <h2>Location:</h2>
-                <p>Boston, MA</p>
+                <p>{location}}</p>
                 </section>
             </section>
             
             <section summary id="summary">
-                <h2>Hello! I'm James</h2>
-                <p>Welcome to my resume website, 
-                    where I showcase my skills and experience. 
-                    I am a driven and motivated player-coach Manager 
-                    with a passion for product and customer experience. 
-                    Please take a moment to browse my page and 
-                    learn more about me. <br/><br/>
-                    
-                    
-                    
-                    With over 15 years experience spanning client-facing technical roles and the last 5 being increasingly focussed within  product roles, I excel in managing and delivering products and results. I have a demonstrated track record of leading both local and virtual teams and collaborating effectively with internal and external stakeholders. My approach revolves around closely understanding client needs and use cases to ensure tailored solutions. I possess a knack for swiftly acquiring technical skills and leveraging them to propel team success with energy and enthusiasm. Having worked in diverse cultural settings, I've honed my communication and delivery skills, enabling me to adapt my approach to suit varied audiences effectively.
-                    </p>
+                <h2>{summaryHeadline}</h2>
+                <p>{summaryDetail} </p>
             </section>
 
         </header>

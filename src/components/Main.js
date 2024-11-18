@@ -1,9 +1,18 @@
-import React from "react";
+import React from 'react';
 import BNY from "../images/bny.png"
 import grubhub from "../images/grubhub.png"
 import monotype from "../images/monotype.png"
 
 const Main = () => {
+
+
+  const notes = [
+    "Buy groceries",
+    "Finish project",
+    "Plan weekend trip",
+  ];
+
+  //console.log(portfolioArray)
     return(
         <main>
             <section id="title"><label>EXPERIENCE</label></section>
@@ -26,7 +35,7 @@ const Main = () => {
     Reporting in to the C-Suite, ownership over the execution of key company digital initiatives including client-facing APIs, working closely with the Product Owners, Sales, Partnerships, Production Engineering, Customer Success, and clients to ensure internal and external products are delivered successfully.
   </p>
   <ul>
-    <li>Successfully took API product 0->1, implementing and organizing a pipeline of future clients.</li>
+    <li>Successfully took API product 0-1, implementing and organizing a pipeline of future clients.</li>
     <li>Coordinated cross-functionally with sales, engineering, solution architects, QA, SRE, and support to create a scalable, repeatable process to support the new product.</li>
     <li>Groomed and managed the product backlog to develop a clear vision and roadmap, aiding the product owner.</li>
     <li>Managed multiple client integrations concurrently, ensuring timely delivery and exceeding stakeholder expectations.</li>
@@ -40,6 +49,14 @@ const Main = () => {
                 <p>
     Senior manager with oversight of a team responsible for implementing and supporting SaaS (Mobile Ordering) and Hardware (POSs, Kiosks, BOH hardware) solutions for clients, primarily in higher education. With in-depth knowledge of campus products, served as a pivotal link between Engineering, Product, Support Operations, CSM, and Sales teams. 
   </p>
+  {/* <p id="sticker">123</p> */}
+  <div className="notes-container">
+        {notes.map((note, index) => (
+          <div className="note" key={index}>
+            {note}
+          </div>
+        ))}
+      </div>
   <ul>
     <li>Managed system integrations, SSO implementation, L3 Support, and SRE & System monitoring. Promotion to Senior Manager within 7 months for exceptional performance and expanded responsibilities including oversight of external Data Delivery, PCI Audits, and Sales engineering.</li>
     <li>Oversaw implementations for 200 clients over 3 years.</li>

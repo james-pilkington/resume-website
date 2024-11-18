@@ -185,23 +185,20 @@ header section h1 {
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
-main img {
-  height: 30px;
-  padding-top: 20px;
-}
-
 #experience {
   background-image: url("../src/images/experience.jpg");
 }
 
-#experience, #education {
+#experience, #education, #education2  {
   position: relative;
   background-size: cover;
   background-position: bottom;
   color: white;
+  list-style-position: inside;
+  list-style-type: square;
 }
 
-#experience::before, #education::before {
+#experience::before, #education::before, #education2::before  {
   content: "";
   position: absolute;
   top: 0;
@@ -213,33 +210,50 @@ main img {
 }
 
 /* Make sure content inside #education is above the overlay */
-#experience *, #education *{
+#experience *, #education *, #education2 *{
   position: relative;
   z-index: 2;
 }
 
-#education {
+#education, #education2 {
   background-image: url("../src/images/derby.jpg");
 }
 
-main section {
-  display: grid;
-  grid-template-columns:  1fr 2fr;
-  gap: 5px;
+main img , #experience img{
+  height: 30px;
+  /* padding-top: 20px; */
 }
 
-main section h2, main section h3 {
-  text-align: right;
-  padding-right: 5px;
+#education2, #experience {
+  display: grid; /* Make it a grid container */
+  grid-template-columns: 1fr; /* Two columns: headings and details */
+  align-items: stretch;
+  text-align: center;
+  row-gap: 10px;
 }
 
-main section h3 {
-  text-shadow: 0.2px 0.2px var(--primary-color);
+#experience div {
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
-main section p, main section ul {
-  grid-column: 2/2;
-  padding: 5px 10px;
+.cert:nth-child(odd), .edu:nth-child(odd) {
+  text-align: left; /* Align odd items to the right */
+  color: #ffffff;
+  line-height: 1%;
+  padding-left: 50%;
+}
+
+.cert:nth-child(even), .edu:nth-child(even) {
+  text-align: right; /* Align even items to the left */
+  line-height: 1%;
+  padding-right: 50%;
+  padding-top: 5px;
+}
+
+hr.rounded {
+  border-top: 8px solid #bbb;
+  border-radius: 5px;
 }
 
 /* TESTIMONIALS SECTION */
@@ -257,7 +271,7 @@ main section p, main section ul {
   color: var(--text-color);
   display: grid;
   width: 80%;
-/*Figure out height to stop changing */
+/*adjust height to stop changing */
 }
 
 #portfolio .carousel-content h4 {
@@ -441,4 +455,60 @@ button:hover {
     display: none;
     transform: translateY(0)
 }
+}
+
+.notes-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+
+.note {
+  width: 100px;
+  height: 100px;
+  background-color: #fdfd96;
+  padding: 1rem;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  font-size: 1.2rem;
+  line-height: 1.4;
+  color: #333;
+  text-align: center;
+  border: 1px solid #e2e2e2;
+  position: relative;
+  transform: rotate(calc(-5deg + 10deg * var(--rotate)));
+  transition: transform .15s linear;
+}
+
+.note:hover,.note:focus{
+  box-shadow:10px 10px 7px rgba(0,0,0,.7);
+  transform: scale(1.25);
+  position:relative;
+  z-index:5;
+}
+
+.note:nth-child(1) {
+  --rotate: 1;
+}
+
+.note:nth-child(even) {
+  --rotate: 2;
+  position:relative;
+  top:5px;
+  background:#cfc;
+}
+
+.note:nth-child(3n) {
+  --rotate: -1;
+  position:relative;
+  top:-5px;
+  background:#ccf;
+}
+
+.note:nth-child(5n) {
+  --rotate: 5;
+  position:relative;
+  top:-10px;
 }

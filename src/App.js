@@ -3,7 +3,8 @@ import React, { useRef } from 'react';
 import './App.css';
 import Nav from "./components/Nav"
 import About from "./components/About"
-import Main from "./components/Main"
+// import Main from "./components/Main"
+import Main2 from "./components/Main2"
 import Testimonials from "./components/Testimonials"
 import Contact from "./components/Contact"
 import Portfolio from "./components/portfolio"
@@ -15,7 +16,8 @@ function App() {
 
     // Create refs for each section
     const aboutRef = useRef(null);
-    const mainRef = useRef(null);
+    //const mainRef = useRef(null);
+    const main2Ref = useRef(null);
     const testimonialsRef = useRef(null);
     const contactRef = useRef(null);
     const portfolioRef = useRef(null);
@@ -25,15 +27,19 @@ function App() {
     <React.Fragment>
       <Nav 
       aboutRef={aboutRef}
-      mainRef={mainRef}
+      mainRef={main2Ref}
       testimonialsRef={testimonialsRef}
+      portfolioRef={portfolioRef}
       contactRef={contactRef}
       />
       <section ref={aboutRef}>
       <About />
       </section>
-      <section ref={mainRef}>
+      {/* <section ref={mainRef}>
       <Main />
+      </section> */}
+      <section ref={main2Ref}>
+      <Main2 />
       </section>
       <section ref={testimonialsRef}>
       <Testimonials />

@@ -16,7 +16,6 @@ const Portfolio = () => {
       } else {
         alert("Error fetching portfolio data");
       }
-      console.log(snapshot.val());
     };
 
     fetchData();
