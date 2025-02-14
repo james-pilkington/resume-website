@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import logo from "../images/logo.jpeg"
 import app from "./firebase";
 import { getDatabase, ref, get } from "firebase/database";
+import linkedin from '../images/linkedin.png'
+import ReactMarkdown from 'react-markdown';
 
  
 
@@ -36,7 +38,6 @@ const About = () => {
 
     const tagline = portfolioArray[5];
 
-
     return(
         <header>
 
@@ -53,12 +54,16 @@ const About = () => {
                 <p>{email}</p>
                 <h2>Location:</h2>
                 <p>{location}}</p>
+                <h2> Connect with me on</h2>
+                <a href="https://www.linkedin.com/in/jamespilkington1" target="_blank" rel="noopener noreferrer">
+                  <img src={linkedin} alt="linkedin" />
+                </a>
                 </section>
             </section>
             
             <section summary id="summary">
                 <h2>{summaryHeadline}</h2>
-                <p>{summaryDetail} </p>
+                <ReactMarkdown>{summaryDetail}</ReactMarkdown>
             </section>
 
         </header>

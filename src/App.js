@@ -8,6 +8,8 @@ import Main2 from "./components/Main2"
 import Testimonials from "./components/Testimonials"
 import Contact from "./components/Contact"
 import Portfolio from "./components/portfolio"
+import SkillsVisualizer from './components/SkillsVisualizer';
+//import ClientCarousel from './components/ClientCarousel';
 //import Footer from "./components/Footer"
 
 
@@ -38,6 +40,8 @@ function App() {
       {/* <section ref={mainRef}>
       <Main />
       </section> */}
+      <SkillsVisualizer />
+      {/* <ClientCarousel /> */}
       <section ref={main2Ref}>
       <Main2 />
       </section>

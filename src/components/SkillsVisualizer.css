@@ -1,0 +1,121 @@
+.skills-container {
+  position: relative;
+  width: 500px;  /* Increased from 450px to 500px */
+  height: 500px; /* Increased to allow better spacing */
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible; /* Ensures no images get cut off */
+  border-radius: 50%;
+  margin-bottom: 50px;
+}
+
+.center-icon {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.center-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.floating-icon {
+  position: absolute;
+  max-height: 50px; /* Set a max height */
+  width: auto;       /* Maintain aspect ratio */
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Floating animations - small subtle movements */
+@keyframes subtleFloat {
+  0% { transform: translate(0px, 0px); }
+  50% { transform: translate(6px, -6px); }
+  100% { transform: translate(0px, 0px); }
+}
+
+.floating-icon img {
+  max-height: 50px; /* Ensures all images fit properly */
+  width: auto;       /* Maintains aspect ratio */
+  opacity: 0.9;
+}
+
+/* Positioning icons farther out in a circular layout */
+.icon-0 { top: 0%; left: 50%; transform: translateX(-50%); animation: subtleFloat 4s infinite alternate ease-in-out; }
+.icon-1 { top: 8%; left: 75%; animation: subtleFloat 5s infinite alternate ease-in-out; }
+.icon-2 { top: 20%; left: 90%; animation: subtleFloat 6s infinite alternate ease-in-out; }
+.icon-3 { top: 38%; left: 98%; animation: subtleFloat 4.5s infinite alternate ease-in-out; }
+.icon-4 { top: 58%; left: 98%; animation: subtleFloat 5.5s infinite alternate ease-in-out; }
+.icon-5 { top: 78%; left: 90%; animation: subtleFloat 4.8s infinite alternate ease-in-out; }
+.icon-6 { top: 92%; left: 75%; animation: subtleFloat 5.2s infinite alternate ease-in-out; }
+.icon-7 { top: 100%; left: 50%; transform: translateX(-50%); animation: subtleFloat 5.4s infinite alternate ease-in-out; }
+.icon-8 { top: 92%; left: 25%; animation: subtleFloat 4.6s infinite alternate ease-in-out; }
+.icon-9 { top: 78%; left: 10%; animation: subtleFloat 5s infinite alternate ease-in-out; }
+.icon-10 { top: 58%; left: 2%; animation: subtleFloat 4.7s infinite alternate ease-in-out; }
+.icon-11 { top: 38%; left: 2%; animation: subtleFloat 5.3s infinite alternate ease-in-out; }
+.icon-12 { top: 20%; left: 10%; animation: subtleFloat 4.9s infinite alternate ease-in-out; }
+.icon-13 { top: 8%; left: 25%; animation: subtleFloat 5.1s infinite alternate ease-in-out; }
+.icon-14 { top: 50%; left: 85%; animation: subtleFloat 5.6s infinite alternate ease-in-out; }
+.icon-15 { top: 95%; left: -05%; animation: subtleFloat 4.8s infinite alternate ease-in-out; }
+.icon-16 { top: 0%; left: -05%; animation: subtleFloat 5.2s infinite alternate ease-in-out; }
+.icon-17 { top: 0%; left: 90%; animation: subtleFloat 5.4s infinite alternate ease-in-out; }
+.icon-18 { top: 95%; left: 99%; transform: translateX(-50%); animation: subtleFloat 5s infinite alternate ease-in-out; }
+
+..skills-container {
+  position: relative;
+  width: 500px;  /* Default desktop size */
+  height: 500px;
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+  border-radius: 50%;
+  padding-bottom: 50px;
+}
+
+/* Mobile-friendly adjustments */
+@media (max-width: 768px) {
+  .skills-container {
+    width: 320px;  /* Smaller width for mobile */
+    height: 320px;
+  }
+  
+  .center-icon {
+    width: 80px; /* Slightly smaller center icon */
+    height: 80px;
+  }
+  
+  .floating-icon {
+    max-height: 10px;
+    width: auto;
+  }
+
+  /* Adjusting positioning for better centering */
+  .icon-0 { top: 5%; left: 45%; transform: translateX(-50%); }
+  .icon-1 { top: 12%; left: 63%; transform: translateX(-50%); }
+  .icon-2 { top: 25%; left: 80%; transform: translateX(-50%); }
+  .icon-3 { top: 45%; left: 87%; transform: translateX(-50%); }
+  .icon-4 { top: 65%; left: 87%; transform: translateX(-50%); }
+  .icon-5 { top: 80%; left: 80%; transform: translateX(-50%); }
+  .icon-6 { top: 90%; left: 63%; transform: translateX(-50%); }
+  .icon-7 { top: 97%; left: 45%; transform: translateX(-50%); }
+  .icon-8 { top: 90%; left: 27%; transform: translateX(-50%); }
+  .icon-9 { top: 80%; left: 10%; transform: translateX(-50%); }
+  .icon-10 { top: 65%; left: 3%; transform: translateX(-50%); }
+  .icon-11 { top: 45%; left: 3%; transform: translateX(-50%); }
+  .icon-12 { top: 25%; left: 10%; transform: translateX(-50%); }
+  .icon-13 { top: 12%; left: 27%; transform: translateX(-50%); }
+  .icon-14 { top: 50%; left: 75%; transform: translateX(-50%); }
+  .icon-15 { top: 100%; left: 10%; transform: translateX(-50%); }
+  .icon-16 { top: 0%; left: 90%; transform: translateX(-50%); }
+  .icon-17 { top: 0%; left: -05%; transform: translateX(-50%); }
+  .icon-18 { top: 100%; left: 95%; transform: translateX(-50%); }
+}

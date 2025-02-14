@@ -1,34 +1,4 @@
-#experience {
-  background-image: url("../src/images/experience.jpg");
-}
 
-#experience, #education {
-  position: relative;
-  background-size: cover;
-  background-position: bottom;
-  color: white;
-}
-
-#experience::before, #education::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.6); /* Dark overlay with some transparency */
-  z-index: 1; /* Ensure the overlay is below the content */
-}
-
-/* Make sure content inside #education is above the overlay */
-#experience *, #education *{
-  position: relative;
-  z-index: 2;
-}
-
-#education {
-  background-image: url("../src/images/derby.jpg");
-}
 
 main section {
   display: grid;

@@ -10,6 +10,11 @@ const Main2 = () => {
   const [eduArray, setEduArray] = useState([]);
   const [certArray, setCertArray] = useState([]);
 
+//   const notes = [
+//     "Buy groceries",
+//     "Finish project",
+//   ];
+
   useEffect(() => {
     const fetchExperience = async () => {
       const db = getDatabase(app);
@@ -69,7 +74,9 @@ const Main2 = () => {
         }
         return (
           <div key={index}>
+            <div id="company">
             <h2>{company}</h2> <img src={logo} alt={`${company} logo`} />
+            </div>
             {positions.slice().reverse().map((position, posIndex) => (
               <div key={posIndex}>
                 <h3>
@@ -85,6 +92,7 @@ const Main2 = () => {
                 )}
               </div>
             ))}
+            {/* <hr class="rounded"></hr> */}
           </div>
         );
       })}
@@ -115,7 +123,7 @@ const Main2 = () => {
 
   return (
     <div>
-        <section id="title"><label>EXPERIENCE</label></section>
+        <section id="title"><label>EXPERIENCE HIGHLIGHTS</label></section>
       <ExperienceSection experiences={portfolioArray} />
       <section id="title"><label>EDUCATION & CERTIFICATIONS</label></section>
       <section id="education2">

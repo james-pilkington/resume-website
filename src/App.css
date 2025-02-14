@@ -143,6 +143,10 @@ header * {
   margin: 5px 0;
   font-style: italic;
 }
+#intro_details img {
+  height: 25px;
+  width: 25px;
+}
 
 header section h1 {
   font-size: 40px;
@@ -230,7 +234,9 @@ main img , #experience img{
   align-items: stretch;
   text-align: center;
   row-gap: 10px;
+  
 }
+
 
 #experience div {
   padding-left: 5%;
@@ -252,8 +258,9 @@ main img , #experience img{
 }
 
 hr.rounded {
-  border-top: 8px solid #bbb;
-  border-radius: 5px;
+  border-top: 1px solid var(--primary-color);
+  border-radius: 1px;
+  padding-left: 70%;
 }
 
 /* TESTIMONIALS SECTION */
