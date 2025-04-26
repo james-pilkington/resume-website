@@ -35,7 +35,7 @@ const Testimonials = () => {
 
   return (
     <section id="testimonal">
-      <section id="title"><label>REFERENCES</label></section>
+      {/* section id="title"><label>REFERENCES</label></section> */}
       <div className="carousel-container">
         <button onClick={handlePrev} aria-label="Previous Reference">❮</button>
         <div className="carousel-content">

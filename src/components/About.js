@@ -49,11 +49,11 @@ const About = () => {
                 </h1>
                 <h2 id="tagline">{tagline}</h2>
                 <h2>Phone:</h2>
-                <p>{phone}}</p>
+                <p>{phone}</p>
                 <h2>Email:</h2>
                 <p>{email}</p>
                 <h2>Location:</h2>
-                <p>{location}}</p>
+                <p>{location}</p>
                 <h2> Connect with me on</h2>
                 <a href="https://www.linkedin.com/in/jamespilkington1" target="_blank" rel="noopener noreferrer">
                   <img src={linkedin} alt="linkedin" />

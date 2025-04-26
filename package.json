@@ -9,11 +9,15 @@
     "@testing-library/user-event": "^13.5.0",
     "firebase": "^11.0.1",
     "framer-motion": "^12.4.2",
+    "install": "^0.13.0",
+    "lucide-react": "^0.503.0",
+    "pnpm": "^10.9.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-markdown": "^9.0.3",
     "react-multi-carousel": "^2.8.5",
     "react-scripts": "5.0.1",
+    "styled-components": "^6.1.17",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -43,6 +47,7 @@
     ]
   },
   "devDependencies": {
+    "ajv": "^7.2.4",
     "gh-pages": "^6.2.0"
   }
 }

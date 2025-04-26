@@ -1,17 +1,14 @@
 import React, { useRef } from 'react';
-//import { BrowserRouter as Router, Routes, Navigate, Route, Link, useNavigate } from 'react-router-dom';
 import './App.css';
 import Nav from "./components/Nav"
 import About from "./components/About"
-// import Main from "./components/Main"
-import Main2 from "./components/Main2"
-import Testimonials from "./components/Testimonials"
+import Experience from "./components/Experience"
+import Education from "./components/Education"
 import Contact from "./components/Contact"
-import Portfolio from "./components/portfolio"
-import SkillsVisualizer from './components/SkillsVisualizer';
-//import ClientCarousel from './components/ClientCarousel';
-//import Footer from "./components/Footer"
-
+import Portfolio from "./components/portfolio2"
+import { Tools } from './components/SkillsVisualizer2';
+import HeaderScroller from './components/heading';
+import Carousel from './components/Testimonials2';
 
 
 function App() {
@@ -19,42 +16,38 @@ function App() {
     // Create refs for each section
     const aboutRef = useRef(null);
     //const mainRef = useRef(null);
-    const main2Ref = useRef(null);
-    const testimonialsRef = useRef(null);
+    // const main2Ref = useRef(null);
+    // const testimonialsRef = useRef(null);
     const contactRef = useRef(null);
-    const portfolioRef = useRef(null);
+    // const portfolioRef = useRef(null);
     
   return (
     <div>
     <React.Fragment>
       <Nav 
       aboutRef={aboutRef}
-      mainRef={main2Ref}
-      testimonialsRef={testimonialsRef}
-      portfolioRef={portfolioRef}
+      // mainRef={main2Ref}
+      // testimonialsRef={testimonialsRef}
+      // portfolioRef={portfolioRef}
       contactRef={contactRef}
       />
       <section ref={aboutRef}>
       <About />
       </section>
-      {/* <section ref={mainRef}>
-      <Main />
-      </section> */}
-      <SkillsVisualizer />
-      {/* <ClientCarousel /> */}
-      <section ref={main2Ref}>
-      <Main2 />
-      </section>
-      <section ref={testimonialsRef}>
-      <Testimonials />
-      </section>
-      <section ref={portfolioRef}>
+      <Tools />
+      <HeaderScroller text="-Experience Highlights-" />
+      <Experience />
+      <HeaderScroller text="-Education & Certifications-" />
+      <Education />
+      {/* <Main2 /> */}
+      <HeaderScroller text="-Professional References-" />
+      <Carousel />
+      <HeaderScroller text="-Portfolio of Work-" />
       <Portfolio /> 
-      </section>
       <section ref={contactRef}>
+        <HeaderScroller text="-CONTACT FORM-" />
       <Contact /> 
       </section>
-      {/*<Footer /> */}
     </React.Fragment>
     </div>
   );

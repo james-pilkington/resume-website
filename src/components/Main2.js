@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import BNY from "../images/bny.png";
-import grubhub from "../images/grubhub.png";
-import monotype from "../images/monotype.png";
+// import BNY from "../images/bny.png";
+// import grubhub from "../images/grubhub.png";
+// import monotype from "../images/monotype.png";
 import app from "./firebase";
 import { getDatabase, ref, get } from "firebase/database";
 
 const Main2 = () => {
-  const [portfolioArray, setPortfolioArray] = useState([]);
+  //const [portfolioArray, setPortfolioArray] = useState([]);
   const [eduArray, setEduArray] = useState([]);
   const [certArray, setCertArray] = useState([]);
 
@@ -16,16 +16,16 @@ const Main2 = () => {
 //   ];
 
   useEffect(() => {
-    const fetchExperience = async () => {
-      const db = getDatabase(app);
-      const dbRef = ref(db, "resume/experience");
-      const snapshot = await get(dbRef);
-      if (snapshot.exists()) {
-        setPortfolioArray(Object.values(snapshot.val()));
-      } else {
-        alert("Error fetching portfolio data");
-      }
-    };
+    // const fetchExperience = async () => {
+    //   const db = getDatabase(app);
+    //   const dbRef = ref(db, "resume/experience");
+    //   const snapshot = await get(dbRef);
+    //   if (snapshot.exists()) {
+    //     setPortfolioArray(Object.values(snapshot.val()));
+    //   } else {
+    //     alert("Error fetching portfolio data");
+    //   }
+    // };
 
     const fetchEducation = async () => {
       const db = getDatabase(app);
@@ -49,55 +49,55 @@ const Main2 = () => {
       }
     };
 
-    fetchExperience();
+    // fetchExperience();
     fetchEducation();
     fetchCerts();
   }, []);
 
-  const ExperienceSection = ({ experiences }) => (
-    <section id="experience">
-      {experiences.slice().reverse().map((companyData, index) => {
-        const [company, positions] = Object.entries(companyData)[0];
-        let logo;
-        switch (company) {
-          case 'Monotype':
-            logo = monotype;
-            break;
-          case 'Grubhub':
-            logo = grubhub;
-            break;
-          case 'BNY':
-            logo = BNY;
-            break;
-          default:
-            logo = ''; // Default or placeholder image
-        }
-        return (
-          <div key={index}>
-            <div id="company">
-            <h2>{company}</h2> <img src={logo} alt={`${company} logo`} />
-            </div>
-            {positions.slice().reverse().map((position, posIndex) => (
-              <div key={posIndex}>
-                <h3>
-                  {position.title} <br /> {position.from} – {position.to || 'Current'}
-                </h3>
-                <p>{position.summary}</p>
-                {position.bullets && (
-                  <ul>
-                    {position.bullets.filter(Boolean).map((bullet, bulletIndex) => (
-                      <li key={bulletIndex}>{bullet}</li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-            ))}
-            {/* <hr class="rounded"></hr> */}
-          </div>
-        );
-      })}
-    </section>
-  );
+  // const ExperienceSection = ({ experiences }) => (
+  //   <section id="experience">
+  //     {experiences.slice().reverse().map((companyData, index) => {
+  //       const [company, positions] = Object.entries(companyData)[0];
+  //       let logo;
+  //       switch (company) {
+  //         case 'Monotype':
+  //           logo = monotype;
+  //           break;
+  //         case 'Grubhub':
+  //           logo = grubhub;
+  //           break;
+  //         case 'BNY':
+  //           logo = BNY;
+  //           break;
+  //         default:
+  //           logo = ''; // Default or placeholder image
+  //       }
+  //       return (
+  //         <div key={index}>
+  //           <div id="company">
+  //           <h2>{company}</h2> <img src={logo} alt={`${company} logo`} />
+  //           </div>
+  //           {positions.slice().reverse().map((position, posIndex) => (
+  //             <div key={posIndex}>
+  //               <h3>
+  //                 {position.title} <br /> {position.from} – {position.to || 'Current'}
+  //               </h3>
+  //               <p>{position.summary}</p>
+  //               {position.bullets && (
+  //                 <ul>
+  //                   {position.bullets.filter(Boolean).map((bullet, bulletIndex) => (
+  //                     <li key={bulletIndex}>{bullet}</li>
+  //                   ))}
+  //                 </ul>
+  //               )}
+  //             </div>
+  //           ))}
+  //           {/* <hr class="rounded"></hr> */}
+  //         </div>
+  //       );
+  //     })}
+  //   </section>
+  // );
 
   const EducationSection = ({ education }) => (
     <section>
@@ -123,9 +123,9 @@ const Main2 = () => {
 
   return (
     <div>
-        <section id="title"><label>EXPERIENCE HIGHLIGHTS</label></section>
-      <ExperienceSection experiences={portfolioArray} />
-      <section id="title"><label>EDUCATION & CERTIFICATIONS</label></section>
+        {/* <section id="title"><label>EXPERIENCE HIGHLIGHTS</label></section> */}
+      {/* <ExperienceSection experiences={portfolioArray} /> */}
+      {/* <section id="title"><label>EDUCATION & CERTIFICATIONS</label></section> */}
       <section id="education2">
       <EducationSection education={eduArray} />
       <hr class="rounded"></hr>

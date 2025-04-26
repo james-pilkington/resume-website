@@ -31,7 +31,7 @@ const Portfolio = () => {
 
   return (
     <section id="portfolio">
-      <section id="title"><label>PORTFOLIO</label></section>
+      {/* <section id="title"><label>PORTFOLIO</label></section> */}
       <div className="carousel-container">
         <button onClick={handlePrev} aria-label="Previous Project">❮</button>
         <div className="carousel-content">
