@@ -26,7 +26,9 @@ export default function Experience() {
     fetchExperience();
   }, []);
 
-  const getLogo = (company) => {
+  const getLogo = (company, positions) => {
+  // 1️⃣ Local images first
+  const local = (() => {
     switch (company) {
       case "Monotype":
         return monotype;
@@ -35,9 +37,24 @@ export default function Experience() {
       case "BNY":
         return BNY;
       default:
-        return "";
+        return null;
     }
-  };
+  })();
+
+  if (local) return local;
+
+  // 2️⃣ Firebase fallback: look for logo on any position object
+  if (Array.isArray(positions)) {
+    const firstWithLogo = positions.find(
+      p => p && typeof p === "object" && p.logo
+    );
+    if (firstWithLogo?.logo) return firstWithLogo.logo;
+  }
+
+  return ""; // no logo found
+};
+
+
 
   const getDateRange = (positions) => {
     if (!Array.isArray(positions)) return "";
@@ -77,7 +94,7 @@ export default function Experience() {
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
   >
-    <img src={getLogo(company)} alt={company} />
+<img src={getLogo(company, item[company])} alt={company} />
   </LogoCard>
   {index % 2 === 0 && (
     <>
@@ -112,7 +129,7 @@ export default function Experience() {
                         .reverse()
                         .map((position, posIndex) => (
                           <CompanySection key={`${company}-${posIndex}`}>
-                            <Logo src={getLogo(company)} alt={company} />
+                            <Logo src={getLogo(company, positions)} alt={company} />
                             <CompanyTitle>{company}</CompanyTitle>
                             <JobTitle>
                               {position.title} <br /> {position.from} –{" "}
